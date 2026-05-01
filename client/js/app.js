@@ -1,10 +1,18 @@
+const DEFAULT_APP_ORIGIN = "https://donation-s0gk.onrender.com";
+
 const resolveAppOrigin = () => {
+  const storedOrigin = localStorage.getItem("appOrigin");
+  const currentOrigin = window.location.origin;
+  const isLocalHost =
+    currentOrigin.includes("localhost") || currentOrigin.includes("127.0.0.1");
+
   if (window.location.protocol === "http:" || window.location.protocol === "https:") {
-    localStorage.setItem("appOrigin", window.location.origin);
-    return window.location.origin;
+    const appOrigin = isLocalHost ? currentOrigin : DEFAULT_APP_ORIGIN;
+    localStorage.setItem("appOrigin", appOrigin);
+    return appOrigin;
   }
 
-  return localStorage.getItem("appOrigin") || "http://localhost:5001";
+  return storedOrigin || DEFAULT_APP_ORIGIN;
 };
 
 const APP_ORIGIN = resolveAppOrigin();

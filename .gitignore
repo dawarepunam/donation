@@ -38,3 +38,7 @@ coverage/
 Thumbs.db
 .vscode/
 .idea/
+.env
+.env.example
+node_modules/
+package-lock.json
