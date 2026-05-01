@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HopeSpring NGO | Donation Platform</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">HopeSpring NGO</a>
+      <nav class="nav-links" id="primaryNav" data-app-nav>
+        <a href="index.html">Home</a>
+        <a href="campaigns.html">Campaign List</a>
+        <a href="index.html#totalImpactSection">Total Impact</a>
+        <a href="index.html#liveFeedSection">Live Donation Feed</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">HopeSpring NGO</p>
+          <h1>Compassion in action for every family, child, and community we serve.</h1>
+          <p class="hero-text">
+            A trusted NGO platform where every donation supports transparent campaigns,
+            real-time impact updates, monthly giving, and tax-ready certificates.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="campaigns.html">Campaign List</a>
+            <a class="btn btn-secondary" href="#aboutNgo">About HopeSpring</a>
+          </div>
+        </div>
+        <div class="hero-visual-stack">
+          <div id="heroSlider" class="hero-slider"></div>
+          <div class="hero-card stat-grid" id="homeStats">
+            <article class="stat-card">
+              <span>Total donated</span>
+              <strong>INR 0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Lives helped</span>
+              <strong>0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Campaigns</span>
+              <strong>0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Donors</span>
+              <strong>0</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="aboutNgo" class="panel ngo-story-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Our mission</p>
+          <h2>Helping communities with dignity, speed, and accountability</h2>
+        </div>
+        <p class="hero-text">
+          HopeSpring NGO works across education, emergency support, health outreach,
+          and community resilience. Our goal is simple: make generosity easy,
+          trustworthy, and visible for every donor who joins the mission.
+        </p>
+      </section>
+
+      <section id="totalImpactSection" class="impact-spotlight">
+        <div class="section-heading">
+          <p class="eyebrow">Total impact</p>
+          <h2>See how every donation moves the mission forward</h2>
+        </div>
+        <div id="impactHighlights" class="impact-highlight-grid"></div>
+      </section>
+
+      <section class="journey-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Donation flow</p>
+          <h2>From campaign page to certificate in a clean donor journey</h2>
+        </div>
+        <div id="flowSteps" class="flow-grid"></div>
+      </section>
+
+      <section class="section-grid">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Featured campaigns</p>
+            <h2>Choose where your donation goes</h2>
+          </div>
+          <div class="inline-actions">
+            <a class="btn btn-secondary" href="campaigns.html">Open Campaign List</a>
+          </div>
+          <div id="campaign-grid" class="campaign-grid"></div>
+        </div>
+
+        <aside id="liveFeedSection" class="live-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Live donation feed</p>
+            <h2>Support is happening right now</h2>
+          </div>
+          <div id="liveFeed" class="live-feed"></div>
+        </aside>
+      </section>
+
+      <section class="section-grid single leaderboard-band">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Leaderboard</p>
+            <h2>Top supporters and anonymous giving</h2>
+          </div>
+          <div id="leaderboardList" class="stack-list"></div>
+        </article>
+
+        <article class="panel tax-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Tax and trust</p>
+            <h2>Every donation stays ready for Section 80G reporting</h2>
+          </div>
+          <div class="stack-list">
+            <div class="list-card">
+              <strong>Certificate generated</strong>
+              <p>Every verified payment creates a unique 80G receipt with NGO PAN and certificate ID.</p>
+            </div>
+            <div class="list-card">
+              <strong>Dashboard archive</strong>
+              <p>Users can download single certificates, export a ZIP, and keep multi-year giving history.</p>
+            </div>
+            <div class="list-card">
+              <strong>Year-end tax report</strong>
+              <p>Financial year totals, month-wise breakdown, and all receipts stay ready in one place.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="recent-donor-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Recent donors</p>
+          <h2>People who just backed the mission</h2>
+        </div>
+        <div id="recentDonors" class="donor-grid"></div>
+      </section>
+
+      <section class="stories-panel" id="storyPanel">
+        <div class="section-heading">
+          <p class="eyebrow">Success stories</p>
+          <h2>Completed campaigns and lasting outcomes</h2>
+        </div>
+        <div id="stories" class="stories-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>HopeSpring NGO</strong>
+        <p>Giving with trust, transparency, and live impact.</p>
+      </div>
+      <div>
+        <span>Support campaigns, track results, and stay connected to change.</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/socket.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

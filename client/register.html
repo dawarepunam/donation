@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | HopeSpring NGO</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-card">
+        <p class="eyebrow">Join the mission</p>
+        <h1>Create your donor account</h1>
+        <div id="authMessage" class="auth-message hidden"></div>
+        <form id="registerForm" class="auth-form">
+          <label>
+            Full name
+            <input id="name" required />
+          </label>
+          <label>
+            Email
+            <input id="email" type="email" required />
+          </label>
+          <label>
+            Mobile
+            <input id="mobile" />
+          </label>
+          <label>
+            Password
+            <input id="password" type="password" required />
+          </label>
+          <label>
+            Profile photo
+            <input id="profilePhotoInput" type="file" accept="image/*" />
+          </label>
+          <div id="profilePhotoPreview" class="photo-upload-preview"></div>
+          <button class="btn btn-primary full-width" type="submit">Register</button>
+        </form>
+        <p class="auth-switch">
+          Already a donor? <a id="loginSwitchLink" href="login.html">Login here</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

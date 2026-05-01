@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Donors | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="donors">
+    <div id="marketingShell">
+      <main data-page-content class="superadmin-stack">
+        <section class="superadmin-card">
+          <form id="donorSearchForm" class="superadmin-toolbar">
+            <input id="donorSearch" type="search" placeholder="Search consented donor" />
+            <select id="donorSegment">
+              <option value="all">All segments</option>
+              <option value="high">High engagement</option>
+              <option value="medium">Medium engagement</option>
+              <option value="low">Low engagement</option>
+            </select>
+            <button class="superadmin-btn-secondary" type="submit">Filter</button>
+          </form>
+        </section>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Limited Access</p>
+            <h2>Secure donor view</h2>
+          </div>
+          <div id="donorList"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/marketing.js"></script>
+  </body>
+</html>

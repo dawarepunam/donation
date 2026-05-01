@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Login | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-login-body" data-page="login">
+    <main class="superadmin-login-shell">
+      <section class="superadmin-login-card">
+        <p class="superadmin-kicker">Marketing Access</p>
+        <h1>Login to the marketing workspace</h1>
+        <p>Secure donor communication, consent-based outreach, and campaign automation tools.</p>
+        <form id="marketingLoginForm" class="superadmin-auth-form">
+          <label class="superadmin-field">
+            Email
+            <input id="loginEmail" type="email" required />
+          </label>
+          <label class="superadmin-field">
+            Password
+            <input id="loginPassword" type="password" required />
+          </label>
+          <button class="superadmin-btn" type="submit">Login</button>
+          <div id="marketingLoginMessage" class="superadmin-message" hidden></div>
+        </form>
+      </section>
+    </main>
+    <script src="/js/app.js"></script>
+    <script src="/js/marketing.js"></script>
+  </body>
+</html>

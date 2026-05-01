@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Your Account | HopeSpring NGO</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-card">
+        <p class="eyebrow">First login setup</p>
+        <h1>Verify your donor account</h1>
+        <div id="authMessage" class="auth-message hidden"></div>
+        <form id="accountSetupForm" class="auth-form">
+          <label>
+            Email OTP
+            <input id="setupOtp" inputmode="numeric" placeholder="6 digit OTP" required />
+          </label>
+          <label>
+            New password
+            <input id="setupNewPassword" type="password" required />
+          </label>
+          <label>
+            Confirm new password
+            <input id="setupConfirmPassword" type="password" required />
+          </label>
+          <div class="helper-copy">Use 8+ characters with uppercase, lowercase, number, and special character.</div>
+          <button class="btn btn-primary full-width" type="submit">Verify OTP and Continue</button>
+        </form>
+        <div class="auth-actions-inline">
+          <button id="resendOtpButton" class="btn btn-secondary full-width" type="button">Resend OTP</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

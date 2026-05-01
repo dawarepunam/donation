@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Security | HopeSpring</title>
+    <link rel="stylesheet" href="/css/admin-panel.css" />
+  </head>
+  <body class="admin-body" data-page="security">
+    <div id="adminShell">
+      <main data-page-content>
+        <section class="admin-card">
+          <div class="admin-section-head">
+            <p class="admin-kicker">Password Policy</p>
+            <h2>Change admin password</h2>
+            <p>Use 8+ characters with uppercase, lowercase, number, and special character. New password will work on next login.</p>
+          </div>
+          <div id="adminSecurityMessage"></div>
+          <form id="adminPasswordForm" class="admin-form">
+            <label class="admin-field">
+              Current password
+              <input id="adminCurrentPassword" type="password" required />
+            </label>
+            <label class="admin-field">
+              New password
+              <input id="adminNewPassword" type="password" required />
+            </label>
+            <label class="admin-field">
+              Confirm password
+              <input id="adminConfirmPassword" type="password" required />
+            </label>
+            <button class="admin-btn" type="submit">Update Password</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/admin-panel.js"></script>
+  </body>
+</html>

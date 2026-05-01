@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Settings | HopeSpring</title>
+    <link rel="stylesheet" href="/css/admin-panel.css" />
+  </head>
+  <body class="admin-body" data-page="settings">
+    <div id="adminShell">
+      <main data-page-content class="admin-stack">
+        <section class="admin-grid" id="settingsOverview"></section>
+        <section class="admin-grid">
+          <a class="admin-link-card admin-col-4" href="/admin/settings/profile">
+            <strong>Profile</strong>
+            <p>Update name, contact details, and profile image URL.</p>
+          </a>
+          <a class="admin-link-card admin-col-4" href="/admin/settings/security">
+            <strong>Password</strong>
+            <p>Change password with uppercase, lowercase, number, and special character rules.</p>
+          </a>
+          <a class="admin-link-card admin-col-4" href="/admin/settings/notifications">
+            <strong>Notifications</strong>
+            <p>Manage email updates and reminder toggles.</p>
+          </a>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/admin-panel.js"></script>
+  </body>
+</html>

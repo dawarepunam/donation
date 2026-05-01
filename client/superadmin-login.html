@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperAdmin Login | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-login-body" data-page="login">
+    <main class="superadmin-login-shell">
+      <section class="superadmin-login-card">
+        <p class="superadmin-kicker">Secure Access</p>
+        <h1>SuperAdmin login</h1>
+        <p>Login with your superadmin account to manage admins, users, campaigns, and platform controls.</p>
+        <div id="superadminLoginMessage"></div>
+        <form id="superadminLoginForm" class="superadmin-auth-form">
+          <label class="superadmin-field">
+            Email
+            <input id="loginEmail" type="email" required />
+          </label>
+          <label class="superadmin-field">
+            Password
+            <input id="loginPassword" type="password" required />
+          </label>
+          <button class="superadmin-btn" type="submit">Login</button>
+        </form>
+      </section>
+    </main>
+    <script src="/js/app.js"></script>
+    <script src="/js/superadmin.js"></script>
+  </body>
+</html>

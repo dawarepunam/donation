@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campaign Details | HopeSpring NGO</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">HopeSpring NGO</a>
+      <nav class="nav-links" id="campaignNav" data-app-nav>
+        <a href="index.html">Home</a>
+        <a href="campaigns.html">Campaign List</a>
+        <a href="index.html#totalImpactSection">Total Impact</a>
+        <a href="index.html#liveFeedSection">Live Donation Feed</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section id="campaignDetail" class="campaign-detail"></section>
+      <section class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Impact updates / events</p>
+          <h2>Photos, field proof, and fund usage</h2>
+        </div>
+        <div id="campaignImpactTimeline" class="campaign-impact-timeline empty-state">
+          Approved impact updates will appear here after the campaign team publishes them.
+        </div>
+      </section>
+
+      <section class="donation-layout">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Donate now</p>
+            <h2>Complete your contribution</h2>
+          </div>
+
+          <form id="donationForm" class="donation-form">
+            <div class="form-grid">
+              <label>
+                Name
+                <input id="name" placeholder="Your full name" required />
+              </label>
+              <label>
+                Email
+                <input id="email" type="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Mobile
+                <input id="mobile" placeholder="9876543210" required />
+              </label>
+              <label>
+                Amount
+                <input id="amount" type="number" min="1" placeholder="500" required />
+              </label>
+            </div>
+
+            <div class="option-group">
+              <span>Donation type</span>
+              <label class="choice-chip">
+                <input type="radio" name="donationType" value="one-time" checked />
+                One-time
+              </label>
+              <label class="choice-chip">
+                <input type="radio" name="donationType" value="monthly" />
+                Monthly
+              </label>
+            </div>
+
+            <div id="monthlyDurationWrap" class="monthly-duration hidden">
+              <label>
+                Monthly plan duration
+                <select id="durationMonths">
+                  <option value="2">2 months</option>
+                  <option value="3">3 months</option>
+                  <option value="6">6 months</option>
+                  <option value="12" selected>12 months</option>
+                </select>
+              </label>
+              <div class="schedule-note">
+                Each month the same amount will be recorded automatically for the
+                selected duration. You can deactivate the plan any time from your
+                dashboard.
+              </div>
+              <div class="helper-box monthly-plan-box">
+                <div>
+                  <small>Monthly debit</small>
+                  <strong id="monthlyDebit">INR 0</strong>
+                </div>
+                <div>
+                  <small>Total commitment</small>
+                  <strong id="totalCommitment">INR 0</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="option-row">
+              <label class="toggle">
+                <input type="checkbox" id="anonymous" />
+                Donate anonymously
+              </label>
+              <label class="toggle">
+                <input type="checkbox" id="showTaxEstimate" checked />
+                Show tax saving estimate
+              </label>
+            </div>
+
+            <div class="option-row">
+              <label class="toggle">
+                <input type="checkbox" id="receiveUpdates" />
+                I agree to receive updates
+              </label>
+            </div>
+
+            <div class="helper-box">
+              <div>
+                <small>Impact per INR</small>
+                <strong id="impactPerRupee">Loading...</strong>
+              </div>
+              <div>
+                <small>Estimated tax saving</small>
+                <strong id="taxEstimate">INR 0</strong>
+              </div>
+            </div>
+            <div id="donationAccessHelper" class="helper-copy">
+              You can donate as a guest or use your existing donor account.
+            </div>
+
+            <button class="btn btn-primary full-width" type="submit">
+              Donate with Razorpay
+            </button>
+          </form>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">After payment</p>
+            <h2>Your impact snapshot</h2>
+          </div>
+          <div id="impactResult" class="impact-result empty-state">
+            Finish a donation to see your impact message, certificate, and share
+            action here.
+          </div>
+          <div id="campaignSupportMeta" class="campaign-support-meta"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/donate.js"></script>
+  </body>
+</html>

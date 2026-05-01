@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Users | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="marketing">
+    <div id="superadminShell">
+      <main data-page-content class="superadmin-stack">
+        <section class="superadmin-card">
+          <form id="marketingSearchForm" class="superadmin-toolbar">
+            <input id="marketingSearch" type="search" placeholder="Search marketing user" />
+            <div class="superadmin-button-row">
+              <button class="superadmin-btn-secondary" type="submit">Search</button>
+              <a class="superadmin-btn" href="/superadmin/marketing/add">Add Marketing User</a>
+            </div>
+          </form>
+        </section>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Manage Users</p>
+            <h2>Marketing role access</h2>
+          </div>
+          <div id="marketingList"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/superadmin.js"></script>
+  </body>
+</html>

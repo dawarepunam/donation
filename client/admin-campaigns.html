@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Campaigns | HopeSpring</title>
+    <link rel="stylesheet" href="/css/admin-panel.css" />
+  </head>
+  <body class="admin-body" data-page="campaigns">
+    <div id="adminShell">
+      <main data-page-content class="admin-stack">
+        <section class="admin-card">
+          <div class="admin-toolbar">
+            <form id="campaignSearchForm" class="admin-toolbar">
+              <input id="campaignSearch" type="search" placeholder="Search by title, category, location" />
+              <select id="campaignStatusFilter">
+                <option value="">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="active">Active</option>
+                <option value="rejected">Rejected</option>
+                <option value="completed">Completed</option>
+                <option value="draft">Draft</option>
+              </select>
+              <button class="admin-btn-secondary" type="submit">Filter</button>
+            </form>
+            <a class="admin-btn" href="/admin/create-campaign">+ Create Campaign</a>
+          </div>
+        </section>
+        <section class="admin-card">
+          <div id="campaignList"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/admin-panel.js"></script>
+  </body>
+</html>

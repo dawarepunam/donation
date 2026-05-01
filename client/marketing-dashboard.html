@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Dashboard | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="dashboard">
+    <div id="marketingShell">
+      <main data-page-content>
+        <section class="superadmin-grid" id="marketingStats"></section>
+        <section class="superadmin-grid">
+          <article class="superadmin-card superadmin-col-6">
+            <div class="superadmin-section-head">
+              <p class="superadmin-kicker">Recent Campaigns</p>
+              <h2>Campaign performance</h2>
+            </div>
+            <div id="marketingRecentCampaigns"></div>
+          </article>
+          <article class="superadmin-card superadmin-col-6">
+            <div class="superadmin-section-head">
+              <p class="superadmin-kicker">Live Activity</p>
+              <h2>Your recent actions</h2>
+            </div>
+            <div id="marketingLiveActivity"></div>
+          </article>
+        </section>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Audience Segments</p>
+            <h2>High, medium, and low engagement</h2>
+          </div>
+          <div id="marketingSegments"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/marketing.js"></script>
+  </body>
+</html>

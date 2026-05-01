@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | HopeSpring NGO</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">HopeSpring NGO</a>
+      <nav class="nav-links" data-app-nav>
+        <a href="index.html">Home</a>
+        <a href="campaigns.html">Campaign List</a>
+        <a href="index.html#totalImpactSection">Total Impact</a>
+        <a href="index.html#liveFeedSection">Live Donation Feed</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="dashboard-hero">
+        <div>
+          <p class="eyebrow">Admin panel</p>
+          <h1>Manage campaigns, stories, donations, and fundraising analytics.</h1>
+        </div>
+        <div class="inline-actions">
+          <button id="resetCampaignForm" class="btn btn-secondary" type="button">New Campaign</button>
+        </div>
+      </section>
+
+      <section class="admin-shell-grid">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Campaign editor</p>
+            <h2>Create or update fundraiser flow</h2>
+          </div>
+
+          <form id="campaignForm" class="donation-form">
+            <input id="campaignId" type="hidden" />
+
+            <div class="form-grid">
+              <label>
+                Campaign title
+                <input id="title" required />
+              </label>
+              <label>
+                Campaign tagline
+                <input id="tagline" placeholder="Short donor-facing line" />
+              </label>
+              <label>
+                Goal amount
+                <input id="goalAmount" type="number" required />
+              </label>
+              <label>
+                Impact per INR
+                <input id="impactPerUnit" type="number" value="250" required />
+              </label>
+              <label>
+                Impact label
+                <input id="impactLabel" value="child supported" required />
+              </label>
+              <label>
+                Category
+                <input id="category" value="Community Support" />
+              </label>
+              <label>
+                Location
+                <input id="location" placeholder="City or region" />
+              </label>
+              <label>
+                Cover image URL
+                <input id="coverImage" placeholder="https://..." />
+              </label>
+            </div>
+
+            <label>
+              Description
+              <textarea id="description" rows="4"></textarea>
+            </label>
+
+            <div class="form-grid">
+              <label>
+                Story title
+                <input id="storyTitle" placeholder="100 children got education" />
+              </label>
+              <label>
+                Story impact line
+                <input id="storyImpact" placeholder="100 children reached" />
+              </label>
+            </div>
+
+            <label>
+              Story description
+              <textarea id="storyDescription" rows="3"></textarea>
+            </label>
+
+            <label>
+              Story image URL
+              <input id="storyImageUrl" placeholder="https://..." />
+            </label>
+
+            <label>
+              Media lines
+              <textarea id="mediaLines" rows="4" placeholder="image|https://...&#10;video|https://..."></textarea>
+            </label>
+
+            <label>
+              Allocation lines
+              <textarea id="allocationLines" rows="4" placeholder="Learning kits|45|Books and school support&#10;Teacher support|35|Mentor and teacher help"></textarea>
+            </label>
+
+            <div class="section-heading admin-subheading">
+              <p class="eyebrow">Certificate details</p>
+              <h2>NGO info for donation certificate</h2>
+            </div>
+
+            <div class="form-grid">
+              <label>
+                NGO name
+                <input id="ngoName" placeholder="Swachetna Foundation" />
+              </label>
+              <label>
+                NGO PAN
+                <input id="ngoPan" placeholder="AAATN1234A" />
+              </label>
+              <label>
+                80G number
+                <input id="ngo80G" placeholder="80G/NGO/2026/12345" />
+              </label>
+              <label>
+                NGO phone
+                <input id="ngoPhone" placeholder="+91 98765 43210" />
+              </label>
+              <label>
+                NGO email
+                <input id="ngoEmail" placeholder="support@ngo.org" />
+              </label>
+            </div>
+
+            <label>
+              NGO address
+              <textarea id="ngoAddress" rows="3" placeholder="Full address shown on certificate"></textarea>
+            </label>
+
+            <label class="toggle">
+              <input id="featured" type="checkbox" />
+              Feature on home hero
+            </label>
+
+            <div class="action-row">
+              <button class="btn btn-primary" type="submit">Save Campaign</button>
+              <button id="markCompleted" class="btn btn-secondary" type="button">Mark Completed</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Analytics</p>
+            <h2>Donation volume and campaign momentum</h2>
+          </div>
+          <div id="adminStats" class="stack-list"></div>
+          <div class="section-heading admin-subheading">
+            <p class="eyebrow">Recent donors</p>
+            <h2>Live donation ledger</h2>
+          </div>
+          <div id="adminDonations" class="stack-list"></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Campaign management</p>
+            <h2>Edit live and completed campaigns</h2>
+          </div>
+          <div id="adminCampaignList" class="stack-list"></div>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Leaderboard</p>
+            <h2>Top and anonymous supporters</h2>
+          </div>
+          <div id="adminLeaderboard" class="stack-list"></div>
+        </article>
+      </section>
+
+      <section id="superAdminPanel" class="superadmin-shell hidden">
+        <div class="section-heading">
+          <p class="eyebrow">Superadmin control</p>
+          <h2>Manage admins, users, permissions, and platform visibility</h2>
+        </div>
+
+        <div id="superAdminOverview" class="dashboard-summary"></div>
+
+        <section class="superadmin-grid">
+          <article class="panel">
+            <div class="section-heading">
+              <p class="eyebrow">Create admin</p>
+              <h2>Add a new admin with controlled access</h2>
+            </div>
+
+            <form id="superAdminCreateForm" class="donation-form">
+              <div class="form-grid">
+                <label>
+                  Admin name
+                  <input id="superAdminName" required />
+                </label>
+                <label>
+                  Admin email
+                  <input id="superAdminEmail" type="email" required />
+                </label>
+                <label>
+                  Temporary password
+                  <input id="superAdminPassword" type="password" required />
+                </label>
+                <label>
+                  Mobile
+                  <input id="superAdminMobile" />
+                </label>
+              </div>
+
+              <label>
+                Permissions
+                <textarea
+                  id="superAdminPermissions"
+                  rows="4"
+                  placeholder="campaigns.read&#10;campaigns.create&#10;campaigns.update&#10;donations.read"
+                ></textarea>
+              </label>
+
+              <div class="action-row">
+                <button class="btn btn-primary" type="submit">Create Admin</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading">
+              <p class="eyebrow">Permission ideas</p>
+              <h2>Simple keys for role-based control</h2>
+            </div>
+            <div class="stack-list">
+              <div class="list-card">
+                <strong>Campaign manager</strong>
+                <p>campaigns.read, campaigns.create, campaigns.update</p>
+              </div>
+              <div class="list-card">
+                <strong>Donation analyst</strong>
+                <p>donations.read, users.read</p>
+              </div>
+              <div class="list-card">
+                <strong>Operations admin</strong>
+                <p>campaigns.read, campaigns.update, donations.read, subscriptions.read</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="superadmin-grid">
+          <article class="panel">
+            <div class="section-heading">
+              <p class="eyebrow">Admins</p>
+              <h2>Control admin status and access</h2>
+            </div>
+            <div id="superAdminAdmins" class="stack-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading">
+              <p class="eyebrow">Users</p>
+              <h2>Review donor accounts and donation activity</h2>
+            </div>
+            <div id="superAdminUsers" class="stack-list"></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel">
+            <div class="section-heading">
+              <p class="eyebrow">Revenue</p>
+              <h2>Monthly donation overview</h2>
+            </div>
+            <div id="superAdminRevenue" class="stack-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading">
+              <p class="eyebrow">Recent activity</p>
+              <h2>Latest donations across the platform</h2>
+            </div>
+            <div id="superAdminRecent" class="stack-list"></div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

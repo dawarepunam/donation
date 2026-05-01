@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Campaigns | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="campaigns">
+    <div id="marketingShell">
+      <main data-page-content class="superadmin-stack">
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Campaign Studio</p>
+            <h2>Create email or WhatsApp outreach</h2>
+          </div>
+          <form id="marketingCampaignForm" class="superadmin-form">
+            <div class="superadmin-form-grid">
+              <label class="superadmin-field">
+                Title
+                <input id="campaignTitle" required />
+              </label>
+              <label class="superadmin-field">
+                Channel
+                <select id="channel">
+                  <option value="email">Email</option>
+                  <option value="whatsapp">WhatsApp</option>
+                </select>
+              </label>
+              <label class="superadmin-field">
+                Template
+                <select id="templateKey">
+                  <option value="custom">Custom</option>
+                  <option value="thankYou">Thank you</option>
+                  <option value="campaignUpdate">Campaign update</option>
+                  <option value="reminder">Reminder</option>
+                </select>
+              </label>
+              <label class="superadmin-field">
+                Linked Campaign
+                <select id="targetCampaignId"></select>
+              </label>
+              <label class="superadmin-field">
+                Subject
+                <input id="campaignSubject" placeholder="Email subject or campaign line" />
+              </label>
+              <label class="superadmin-field">
+                Audience Segment
+                <select id="audienceSegment">
+                  <option value="all">All</option>
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </label>
+              <label class="superadmin-field">
+                Audience State
+                <select id="audienceState">
+                  <option value="all">All donors</option>
+                  <option value="active">Active donors</option>
+                  <option value="high-value">High-value donors</option>
+                </select>
+              </label>
+              <label class="superadmin-field">
+                Schedule At
+                <input id="scheduleAt" type="datetime-local" />
+              </label>
+              <label class="superadmin-field">
+                Send Mode
+                <select id="campaignSendMode">
+                  <option value="send">Send now</option>
+                  <option value="schedule">Schedule</option>
+                  <option value="draft">Save draft</option>
+                </select>
+              </label>
+              <label class="superadmin-checkbox">
+                <input id="abEnabled" type="checkbox" />
+                Enable A/B testing
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Message A
+                <textarea id="messageA" required placeholder="Use placeholders like {name}, {campaignTitle}, {ctaLink}"></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Message B
+                <textarea id="messageB" placeholder="Second version for A/B test"></textarea>
+              </label>
+            </div>
+            <div class="superadmin-button-row">
+              <button class="superadmin-btn" type="submit">Save Campaign</button>
+              <div id="campaignMessage" class="superadmin-message"></div>
+            </div>
+          </form>
+        </section>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Audience Preview</p>
+            <h2>See which donors will receive this campaign</h2>
+          </div>
+          <div id="marketingAudiencePreview"></div>
+        </section>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Delivery Preview</p>
+            <h2>Professional donor message format</h2>
+          </div>
+          <div id="marketingDeliveryPreview"></div>
+        </section>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Campaign History</p>
+            <h2>Sent, scheduled, and draft outreach</h2>
+          </div>
+          <div id="marketingCampaignList"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/marketing.js"></script>
+  </body>
+</html>

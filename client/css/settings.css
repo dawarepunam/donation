@@ -1,0 +1,367 @@
+.settings-page-shell {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.settings-hero {
+  padding: 1rem 0 0.5rem;
+}
+
+.settings-page-grid {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.settings-sidebar-panel,
+.settings-main-panel {
+  padding: 1.35rem;
+}
+
+.settings-link-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.settings-page-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(29, 43, 40, 0.08);
+  background: #f8fafc;
+  color: #334155;
+}
+
+.settings-page-link.is-active {
+  color: #fff;
+  background: linear-gradient(180deg, #0f766e, #155e75);
+  box-shadow: 0 16px 34px rgba(15, 118, 110, 0.22);
+}
+
+.settings-page-link svg,
+.settings-block-icon svg,
+.settings-inline-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.settings-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.settings-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.settings-block {
+  position: relative;
+  padding: 1.1rem 1.15rem 1.1rem 3.4rem;
+  border-radius: 1.1rem;
+  background: rgba(255, 253, 247, 0.92);
+  border: 1px solid rgba(29, 43, 40, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.settings-block-icon {
+  position: absolute;
+  left: 1.05rem;
+  top: 1.05rem;
+  color: var(--primary);
+}
+
+.settings-block strong {
+  display: block;
+  color: var(--text);
+}
+
+.settings-block p,
+.settings-block small {
+  color: var(--muted);
+}
+
+.settings-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.settings-inline-actions,
+.settings-inline-tools {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.settings-certificate-list,
+.settings-subscription-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.settings-update-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.settings-update-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.settings-update-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.toggle-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.05rem;
+  border-radius: 1rem;
+  background: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.toggle-card small {
+  display: block;
+  margin-top: 0.35rem;
+  color: #64748b;
+}
+
+.toggle-card input {
+  width: auto;
+  margin: 0;
+}
+
+.danger-zone {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(220, 38, 38, 0.2);
+}
+
+.settings-form .helper-copy {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.settings-form .helper-copy.success {
+  color: #047857;
+}
+
+.settings-form .helper-copy.error {
+  color: #b91c1c;
+}
+
+.delete-journey-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.delete-journey-copy p,
+.delete-journey-copy small {
+  max-width: 60ch;
+}
+
+.privacy-subtle-link-wrap {
+  display: grid;
+  gap: 0.15rem;
+  justify-content: start;
+  margin-top: 0.15rem;
+}
+
+.privacy-subtle-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.privacy-subtle-link {
+  font-size: 0.84rem;
+  color: #64748b;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.privacy-subtle-link:hover {
+  color: #334155;
+}
+
+.delete-flow-shell {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.delete-stepper {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.delete-step {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #475569;
+  font-weight: 600;
+}
+
+.delete-step.is-active {
+  background: linear-gradient(135deg, #0f766e, #155e75);
+  color: #fff;
+}
+
+.status-banner {
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+}
+
+.status-banner strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.status-banner.warning {
+  background: #fff7ed;
+  border-color: rgba(234, 88, 12, 0.18);
+  color: #9a3412;
+}
+
+.delete-card-grid {
+  align-items: stretch;
+}
+
+.delete-doc-shell {
+  padding: 1.35rem;
+  border-radius: 1.25rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.97));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.delete-doc-header {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.delete-doc-header h3 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  line-height: 1.25;
+  color: #0f172a;
+}
+
+.delete-doc-header p:last-child {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+  max-width: 68ch;
+}
+
+.delete-policy-scroll {
+  max-height: 430px;
+  overflow-y: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 247, 0.96), rgba(255, 255, 255, 0.98));
+}
+
+.delete-policy-section + .delete-policy-section {
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed rgba(148, 163, 184, 0.22);
+}
+
+.delete-policy-section h4 {
+  margin: 0 0 0.55rem;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.delete-policy-section p {
+  margin: 0 0 0.75rem;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.delete-policy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.delete-doc-toggle {
+  background: #fff;
+}
+
+.delete-info-panel {
+  padding: 1.2rem;
+  border-radius: 1.15rem;
+  background:
+    radial-gradient(circle at top right, rgba(20, 184, 166, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(255, 253, 247, 0.98), rgba(241, 245, 249, 0.94));
+  border: 1px solid rgba(29, 43, 40, 0.08);
+}
+
+.delete-info-panel h3 {
+  margin-bottom: 0.85rem;
+}
+
+.delete-info-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.delete-info-item {
+  padding: 0.95rem 1rem;
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  color: #475569;
+}
+
+.delete-flow-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.delete-flow-actions .is-disabled {
+  pointer-events: none;
+  opacity: 0.55;
+  filter: grayscale(0.2);
+}
+
+.delete-confirm-form {
+  padding: 1.25rem;
+  border-radius: 1.15rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96));
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.confirm-toggle {
+  align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+  .settings-page-grid,
+  .settings-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

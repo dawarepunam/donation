@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Notifications | HopeSpring</title>
+    <link rel="stylesheet" href="/css/admin-panel.css" />
+  </head>
+  <body class="admin-body" data-page="notifications">
+    <div id="adminShell">
+      <main data-page-content>
+        <section class="admin-card">
+          <div id="adminNotificationMessage"></div>
+          <form id="adminNotificationForm" class="admin-form">
+            <label class="admin-check">
+              <input id="adminNotificationEmail" type="checkbox" />
+              Email notifications
+            </label>
+            <label class="admin-check">
+              <input id="adminNotificationReminders" type="checkbox" />
+              Reminder notifications
+            </label>
+            <button class="admin-btn" type="submit">Save Preferences</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/admin-panel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Form | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="marketingForm">
+    <div id="superadminShell">
+      <main data-page-content>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Marketing Access</p>
+            <h2 id="marketingFormTitle">Create marketing account</h2>
+          </div>
+          <form id="marketingForm" class="superadmin-form">
+            <div class="superadmin-form-grid">
+              <label class="superadmin-field">
+                Name
+                <input id="marketingName" required />
+              </label>
+              <label class="superadmin-field">
+                Email
+                <input id="marketingEmail" type="email" required />
+              </label>
+              <label class="superadmin-field">
+                Mobile
+                <input id="marketingMobile" />
+              </label>
+              <label class="superadmin-field">
+                Status
+                <select id="marketingStatus">
+                  <option value="active">Active</option>
+                  <option value="blocked">Blocked</option>
+                </select>
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Password
+                <input id="marketingPassword" type="password" placeholder="Required while creating. Leave blank to keep existing password while editing" />
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Permissions
+                <textarea id="marketingPermissions" placeholder="donors.read.limited&#10;campaigns.send&#10;campaigns.schedule&#10;templates.use"></textarea>
+              </label>
+            </div>
+            <div class="superadmin-meta">
+              Leave permissions blank to use default marketing access:
+              <code>donors.read.limited</code>, <code>campaigns.send</code>, <code>campaigns.schedule</code>,
+              <code>templates.use</code>, <code>impact.manage</code>.
+            </div>
+            <div id="marketingFormMessage" class="superadmin-message" hidden></div>
+            <div class="superadmin-button-row">
+              <a class="superadmin-btn-secondary" href="/superadmin/marketing">Back</a>
+              <button class="superadmin-btn" type="submit">Save Marketing User</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/superadmin.js"></script>
+  </body>
+</html>

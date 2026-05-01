@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Campaign | HopeSpring</title>
+    <link rel="stylesheet" href="/css/admin-panel.css" />
+  </head>
+  <body class="admin-body" data-page="createCampaign">
+    <div id="adminShell">
+      <main data-page-content class="admin-grid">
+        <section class="admin-col-8 admin-card">
+          <form id="campaignForm" class="admin-form">
+            <div class="admin-form-grid">
+              <label class="admin-field">
+                Title
+                <input id="campaignTitle" required />
+              </label>
+              <label class="admin-field">
+                Tagline
+                <input id="campaignTagline" />
+              </label>
+              <label class="admin-field">
+                Goal amount
+                <input id="campaignGoalAmount" type="number" required />
+              </label>
+              <label class="admin-field">
+                Category
+                <input id="campaignCategory" value="Community Support" />
+              </label>
+              <label class="admin-field">
+                Location
+                <input id="campaignLocation" />
+              </label>
+              <label class="admin-field">
+                Cover image URL
+                <input id="campaignCoverImage" />
+              </label>
+              <label class="admin-field">
+                Impact value
+                <input id="campaignImpactPerUnit" type="number" value="250" />
+              </label>
+              <label class="admin-field">
+                Impact label
+                <input id="campaignImpactLabel" value="child supported" />
+              </label>
+            </div>
+            <label class="admin-field">
+              Description
+              <textarea id="campaignDescription"></textarea>
+            </label>
+            <div class="admin-form-grid">
+              <label class="admin-field">
+                Story title
+                <input id="campaignStoryTitle" />
+              </label>
+              <label class="admin-field">
+                Story impact line
+                <input id="campaignStoryImpact" />
+              </label>
+            </div>
+            <label class="admin-field">
+              Story description
+              <textarea id="campaignStoryDescription"></textarea>
+            </label>
+            <label class="admin-field">
+              Story image URL
+              <input id="campaignStoryImageUrl" />
+            </label>
+            <div class="admin-form-grid">
+              <label class="admin-field">
+                Update title
+                <input id="campaignUpdateTitle" placeholder="50 children received books" />
+              </label>
+              <label class="admin-field">
+                Update description
+                <textarea id="campaignUpdateDescription" placeholder="Optional campaign progress update"></textarea>
+              </label>
+            </div>
+            <label class="admin-check">
+              <input id="campaignDraft" type="checkbox" />
+              Save as draft / pending approval
+            </label>
+            <label class="admin-check">
+              <input id="campaignPaused" type="checkbox" />
+              Pause campaign donations
+            </label>
+            <div class="admin-button-row">
+              <button class="admin-btn" type="submit">Save Campaign</button>
+              <a class="admin-btn-secondary" href="/admin/campaigns">Back to Campaigns</a>
+            </div>
+          </form>
+        </section>
+        <aside class="admin-col-4 admin-card">
+          <div class="admin-section-head">
+            <p class="admin-kicker">Preview</p>
+            <h2>Publish snapshot</h2>
+          </div>
+          <div id="campaignPreview"></div>
+        </aside>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/admin-panel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Profile | HopeSpring</title>
+    <link rel="stylesheet" href="/css/admin-panel.css" />
+  </head>
+  <body class="admin-body" data-page="profile">
+    <div id="adminShell">
+      <main data-page-content>
+        <section class="admin-card">
+          <div id="adminProfileMessage"></div>
+          <form id="adminProfileForm" class="admin-form">
+            <div class="admin-form-grid">
+              <label class="admin-field">
+                Name
+                <input id="adminProfileName" required />
+              </label>
+              <label class="admin-field">
+                Email
+                <input id="adminProfileEmail" type="email" disabled />
+              </label>
+              <label class="admin-field">
+                Mobile
+                <input id="adminProfileMobile" />
+              </label>
+              <label class="admin-field">
+                Profile image URL
+                <input id="adminProfilePhoto" />
+              </label>
+            </div>
+            <button class="admin-btn" type="submit">Save Profile</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/admin-panel.js"></script>
+  </body>
+</html>

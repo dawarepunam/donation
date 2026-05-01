@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campaign List | HopeSpring NGO</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">HopeSpring NGO</a>
+      <nav class="nav-links" data-app-nav>
+        <a href="index.html">Home</a>
+        <a href="campaigns.html">Campaign List</a>
+        <a href="index.html#totalImpactSection">Total Impact</a>
+        <a href="index.html#liveFeedSection">Live Donation Feed</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="dashboard-hero campaign-list-hero">
+        <div>
+          <p class="eyebrow">Campaign list</p>
+          <h1>Browse every fundraiser added by the admin team.</h1>
+          <p class="hero-text">
+            Open any campaign to view its story, goal, progress bar, and donation flow with live impact features.
+          </p>
+        </div>
+        <div id="campaignListStats" class="hero-card stat-grid"></div>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <p class="eyebrow">Active fundraisers</p>
+          <h2>Select a campaign title and open its donation page</h2>
+        </div>
+        <div id="campaignTitleList" class="campaign-title-list"></div>
+      </section>
+
+      <section class="campaign-directory-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Campaign directory</p>
+          <h2>Detailed cards for donors and admins</h2>
+        </div>
+        <div id="campaignDirectory" class="campaign-grid campaign-grid-full"></div>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/campaign-list.js"></script>
+  </body>
+</html>

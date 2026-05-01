@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donor Dashboard | HopeSpring NGO</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">HopeSpring NGO</a>
+      <nav class="nav-links" id="dashboardNav" data-app-nav>
+        <a href="index.html">Home</a>
+        <a href="campaigns.html">Campaign List</a>
+        <a href="index.html#totalImpactSection">Total Impact</a>
+        <a href="index.html#liveFeedSection">Live Donation Feed</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main class="page-shell dashboard-shell">
+      <section class="dashboard-hero dashboard-hero-pro">
+        <div class="hero-copy">
+          <p class="eyebrow">Donor command center</p>
+          <h1 id="dashboardGreeting">Track your giving, impact, and activity.</h1>
+          <p id="dashboardHeroMeta" class="hero-support">
+            Your donor dashboard now focuses on overview and insight, while profile and settings live on dedicated pages.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="campaigns.html">Donate Now</a>
+            <a class="btn btn-secondary" href="profile.html">Open Profile</a>
+            <a class="btn btn-secondary" href="documents.html">Tax & Documents</a>
+          </div>
+        </div>
+
+        <aside class="hero-aside panel-soft">
+          <div class="hero-aside-top">
+            <span class="hero-chip">Live donor profile</span>
+            <span id="dashboardBadge" class="hero-chip hero-chip-accent">Bronze</span>
+          </div>
+          <div id="heroProfileCard" class="hero-profile-card"></div>
+          <div id="dashboardPulse" class="hero-pulse-list"></div>
+        </aside>
+      </section>
+
+      <section id="dashboardSummary" class="dashboard-summary dashboard-summary-pro"></section>
+
+      <section class="dashboard-grid dashboard-story-grid">
+        <article class="panel impact-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Impact spotlight</p>
+            <h2>Your giving translated into outcomes</h2>
+          </div>
+          <div id="impactSpotlight" class="impact-spotlight"></div>
+        </article>
+
+        <article class="panel quick-actions-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Quick actions</p>
+            <h2>Jump straight to the next step</h2>
+          </div>
+          <div id="dashboardQuickActions" class="quick-actions-grid"></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Recent activity</p>
+            <h2>Latest donation and payment movement</h2>
+          </div>
+          <div id="recentActivity" class="stack-list"></div>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Timeline</p>
+            <h2>Month-by-month giving view</h2>
+          </div>
+          <div id="timeline" class="stack-list"></div>
+        </article>
+      </section>
+
+      <section class="dashboard-filters panel">
+        <div class="section-heading">
+          <p class="eyebrow">Filters</p>
+          <h2>Refine your donation history</h2>
+        </div>
+        <div class="filter-grid">
+          <label>
+            Year
+            <input id="filterYear" type="number" placeholder="2026" />
+          </label>
+          <label>
+            Month
+            <input id="filterMonth" type="number" min="1" max="12" placeholder="4" />
+          </label>
+          <label>
+            Financial Year
+            <select id="filterFinancialYear">
+              <option value="">All</option>
+            </select>
+          </label>
+        </div>
+        <div class="action-row">
+          <button id="applyFilters" class="btn btn-primary" type="button">Apply Filters</button>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Donation history</p>
+            <h2>Every contribution you have made</h2>
+          </div>
+          <div id="history" class="history-grid"></div>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Campaign support</p>
+            <h2>Causes that received your support</h2>
+          </div>
+          <div id="supportedCampaigns" class="stack-list"></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">My impact</p>
+            <h2>See how your donations were used on the ground</h2>
+          </div>
+          <div id="myImpact" class="stack-list"></div>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Campaign quick nav</p>
+            <h2>Return to the causes you care about</h2>
+          </div>
+          <div id="campaignQuickNav" class="campaign-link-list"></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Reminders</p>
+            <h2>Upcoming nudges and dates</h2>
+          </div>
+          <div id="reminders" class="stack-list"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

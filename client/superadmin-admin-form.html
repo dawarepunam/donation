@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperAdmin Admin Form | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="adminForm">
+    <div id="superadminShell">
+      <main data-page-content>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Admin Access</p>
+            <h2 id="adminFormTitle">Create admin account</h2>
+          </div>
+          <form id="adminForm" class="superadmin-form">
+            <div class="superadmin-form-grid">
+              <label class="superadmin-field">
+                Name
+                <input id="adminName" required />
+              </label>
+              <label class="superadmin-field">
+                Email
+                <input id="adminEmail" type="email" required />
+              </label>
+              <label class="superadmin-field">
+                Mobile
+                <input id="adminMobile" />
+              </label>
+              <label class="superadmin-field">
+                Status
+                <select id="adminStatus">
+                  <option value="active">Active</option>
+                  <option value="blocked">Blocked</option>
+                </select>
+              </label>
+            </div>
+            <label class="superadmin-field">
+              Password
+              <input id="adminPassword" type="password" placeholder="Leave blank to keep existing password while editing" />
+            </label>
+            <label class="superadmin-field">
+              Permissions
+              <textarea id="adminPermissions" placeholder="campaigns.read&#10;campaigns.create&#10;campaigns.update&#10;donations.read"></textarea>
+            </label>
+            <div class="superadmin-button-row">
+              <button class="superadmin-btn" type="submit">Save Admin</button>
+              <a class="superadmin-btn-secondary" href="/superadmin/admins">Back to Admins</a>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/superadmin.js"></script>
+  </body>
+</html>

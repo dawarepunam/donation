@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperAdmin Profile | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="profile">
+    <div id="superadminShell">
+      <main data-page-content class="superadmin-grid">
+        <section class="superadmin-col-6 superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Profile</p>
+            <h2>Superadmin identity</h2>
+          </div>
+          <div id="profileMessage"></div>
+          <form id="profileForm" class="superadmin-form">
+            <label class="superadmin-field">
+              Name
+              <input id="profileName" required />
+            </label>
+            <label class="superadmin-field">
+              Email
+              <input id="profileEmail" type="email" required />
+            </label>
+            <label class="superadmin-field">
+              Mobile
+              <input id="profileMobile" />
+            </label>
+            <label class="superadmin-field">
+              Profile photo URL
+              <input id="profilePhoto" />
+            </label>
+            <button class="superadmin-btn" type="submit">Save Profile</button>
+          </form>
+        </section>
+        <section class="superadmin-col-6 superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Password</p>
+            <h2>Security access</h2>
+          </div>
+          <div id="passwordMessage"></div>
+          <form id="passwordForm" class="superadmin-form">
+            <label class="superadmin-field">
+              Current password
+              <input id="currentPassword" type="password" required />
+            </label>
+            <label class="superadmin-field">
+              New password
+              <input id="newPassword" type="password" required />
+            </label>
+            <button class="superadmin-btn" type="submit">Update Password</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/superadmin.js"></script>
+  </body>
+</html>

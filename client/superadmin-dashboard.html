@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperAdmin Dashboard | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="dashboard">
+    <div id="superadminShell">
+      <main data-page-content>
+        <section class="superadmin-grid" id="dashboardStats"></section>
+        <section class="superadmin-grid">
+          <div class="superadmin-col-6 superadmin-card">
+            <div class="superadmin-section-head">
+              <p class="superadmin-kicker">Recent Donations</p>
+              <h2>Latest donor activity</h2>
+            </div>
+            <div id="recentDonations"></div>
+          </div>
+          <div class="superadmin-col-6 superadmin-card">
+            <div class="superadmin-section-head">
+              <p class="superadmin-kicker">Live Activity</p>
+              <h2>Admin-side actions</h2>
+            </div>
+            <div id="liveActivity"></div>
+          </div>
+        </section>
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Top Campaigns</p>
+            <h2>Highest-performing fundraisers</h2>
+          </div>
+          <div id="topCampaigns"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/superadmin.js"></script>
+  </body>
+</html>

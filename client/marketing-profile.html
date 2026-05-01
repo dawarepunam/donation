@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Profile | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="profile">
+    <div id="marketingShell">
+      <main data-page-content class="superadmin-grid">
+        <section class="superadmin-card superadmin-col-6">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Profile</p>
+            <h2>Marketing profile settings</h2>
+          </div>
+          <form id="profileForm" class="superadmin-form">
+            <label class="superadmin-field">Name <input id="profileName" required /></label>
+            <label class="superadmin-field">Email <input id="profileEmail" type="email" required /></label>
+            <label class="superadmin-field">Mobile <input id="profileMobile" /></label>
+            <label class="superadmin-field">Profile Photo <input id="profilePhoto" /></label>
+            <label class="superadmin-checkbox"><input id="notificationEmail" type="checkbox" /> Email notifications</label>
+            <label class="superadmin-checkbox"><input id="notificationReminders" type="checkbox" /> Reminder notifications</label>
+            <button class="superadmin-btn" type="submit">Save Profile</button>
+            <div id="profileMessage" class="superadmin-message"></div>
+          </form>
+        </section>
+        <section class="superadmin-card superadmin-col-6">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Security</p>
+            <h2>Change password</h2>
+          </div>
+          <form id="passwordForm" class="superadmin-form">
+            <label class="superadmin-field">Current Password <input id="currentPassword" type="password" required /></label>
+            <label class="superadmin-field">New Password <input id="newPassword" type="password" required /></label>
+            <button class="superadmin-btn" type="submit">Update Password</button>
+            <div id="passwordMessage" class="superadmin-message"></div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/marketing.js"></script>
+  </body>
+</html>

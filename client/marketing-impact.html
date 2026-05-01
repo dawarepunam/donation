@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Impact Updates | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="impact">
+    <div id="marketingShell">
+      <main data-page-content class="superadmin-stack">
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Impact / Events</p>
+            <h2>Add transparent event updates for donors</h2>
+          </div>
+          <form id="impactEventForm" class="superadmin-form">
+            <input id="impactEventId" type="hidden" />
+            <div class="superadmin-form-grid">
+              <label class="superadmin-field">
+                Campaign
+                <select id="impactCampaignId" required></select>
+              </label>
+              <label class="superadmin-field">
+                Event title
+                <input id="impactTitle" required />
+              </label>
+              <label class="superadmin-field">
+                Event date
+                <input id="impactDate" type="date" required />
+              </label>
+              <label class="superadmin-field">
+                Location
+                <input id="impactLocation" />
+              </label>
+              <label class="superadmin-field">
+                Impact number
+                <input id="impactNumber" type="number" min="0" />
+              </label>
+              <label class="superadmin-field">
+                Impact label
+                <input id="impactLabel" placeholder="children helped" />
+              </label>
+              <label class="superadmin-field">
+                Fund used
+                <input id="impactFundUsed" type="number" min="0" step="1" />
+              </label>
+              <label class="superadmin-field">
+                Progress %
+                <input id="impactProgress" type="number" min="0" max="100" />
+              </label>
+              <label class="superadmin-checkbox">
+                <input id="impactLiveUpdate" type="checkbox" />
+                Mark as live update
+              </label>
+              <label class="superadmin-field">
+                Live label
+                <input id="impactLiveLabel" placeholder="Food distribution happening now" />
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Description
+                <textarea id="impactDescription"></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-6">
+                Story title
+                <input id="impactStoryTitle" placeholder="Rahul returned to school" />
+              </label>
+              <label class="superadmin-field superadmin-col-6">
+                Map link
+                <input id="impactMapLink" placeholder="https://maps.google.com/..." />
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Story description
+                <textarea id="impactStoryDescription"></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Impact metrics
+                <textarea id="impactMetrics" placeholder="Children helped: 120&#10;Kits distributed: 95"></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Photo URLs
+                <textarea id="impactPhotos" placeholder="One URL per line"></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-6">
+                Before photo URLs
+                <textarea id="impactBeforePhotos" placeholder="One URL per line"></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-6">
+                After photo URLs
+                <textarea id="impactAfterPhotos" placeholder="One URL per line"></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Video URL
+                <input id="impactVideoUrl" placeholder="https://..." />
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Report notes
+                <textarea id="impactReportNotes" placeholder="Fund usage, vendor summary, field notes"></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Share message
+                <textarea id="impactShareMessage" placeholder="You helped 120 children receive school kits."></textarea>
+              </label>
+              <label class="superadmin-field superadmin-col-12">
+                Donor tags
+                <textarea id="impactDonorTags" placeholder="high-value&#10;education"></textarea>
+              </label>
+            </div>
+            <div class="superadmin-button-row">
+              <button class="superadmin-btn" type="submit">Save Impact Update</button>
+              <button class="superadmin-btn-secondary" id="impactEventReset" type="button">Reset</button>
+              <div id="impactEventMessage" class="superadmin-message"></div>
+            </div>
+          </form>
+        </section>
+
+        <section class="superadmin-card">
+          <div class="superadmin-section-head">
+            <p class="superadmin-kicker">Published Timeline</p>
+            <h2>Review pending, approved, and rejected impact updates</h2>
+          </div>
+          <div id="impactEventList"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/marketing.js"></script>
+  </body>
+</html>

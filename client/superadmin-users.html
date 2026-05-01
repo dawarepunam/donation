@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperAdmin Users | HopeSpring</title>
+    <link rel="stylesheet" href="/css/superadmin.css" />
+  </head>
+  <body class="superadmin-body" data-page="users">
+    <div id="superadminShell">
+      <main data-page-content class="superadmin-stack">
+        <section class="superadmin-card">
+          <form id="userSearchForm" class="superadmin-toolbar">
+            <input id="userSearch" type="search" placeholder="Search user by name or email" />
+            <button class="superadmin-btn-secondary" type="submit">Search</button>
+          </form>
+        </section>
+        <section class="superadmin-card">
+          <div id="userList"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/superadmin.js"></script>
+  </body>
+</html>
